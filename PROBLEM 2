@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+    int pgallon, cgallon;
+    float bill;
+    const float charge = 1.10, latechrg = 20;
+    
+    cout << "Enter the value of the Previous Gallon Consumption:";
+    cin >> pgallon;
+    
+    cout << "\n";
+    
+    cout << "Enter the value of the Current Gallon Consumption:";
+    cin >> cgallon;
+    
+    cout << "\n";
+    
+    bill = 35;
+    bill = bill + cgallon * charge;
+    
+    if (pgallon > 0)
+    {
+        bill = bill + latechrg;
+    }
+    
+    cout << "This is the Total Water Bill is:"<< bill;
+
+_getch ();
+return 0;
+}
